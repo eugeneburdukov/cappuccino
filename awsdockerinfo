@@ -1,0 +1,12 @@
+docker:
+docker compose -f seleniumgrid4.yml up
+docker compose -f seleniumgrid4.yml down
+
+Selenium grid:
+http://localhost:4445/ui/index.html#/
+
+password for VNC = "secret"
+
+http://127.0.0.1:51344
+http://127.0.0.1:51349
+http://127.0.0.1:51347
