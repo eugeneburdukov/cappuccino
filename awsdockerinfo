@@ -7,6 +7,12 @@ http://localhost:4445/ui/index.html#/
 
 password for VNC = "secret"
 
-http://127.0.0.1:51344
-http://127.0.0.1:51349
-http://127.0.0.1:51347
+How to access VNC:
+http://127.0.0.1:PORT
+
+docker ps -a
+CONTAINER ID   IMAGE                                       COMMAND                  CREATED         STATUS         PORTS                                                      NAMES
+96b27a4871df   selenium/node-chrome:4.0.0-rc-2-20210930    "/opt/bin/entry_poin…"   3 minutes ago   Up 3 minutes   0.0.0.0:54551->5900/tcp, 0.0.0.0:54552->7900/tcp           cappuccino-ChromeService-1
+4511e82f34bf   selenium/node-firefox:4.0.0-rc-2-20210930   "/opt/bin/entry_poin…"   3 minutes ago   Up 3 minutes   0.0.0.0:54549->5900/tcp, 0.0.0.0:54550->7900/tcp           cappuccino-FirefoxService-1
+dea961b4a04d   selenium/node-edge:4.0.0-rc-2-20210930      "/opt/bin/entry_poin…"   3 minutes ago   Up 3 minutes   0.0.0.0:54553->5900/tcp, 0.0.0.0:54554->7900/tcp           cappuccino-EdgeService-1
+2563ebb53ddf   selenium/hub:4.0.0-rc-2-20210930            "/opt/bin/entry_poin…"   3 minutes ago   Up 3 minutes   0.0.0.0:4442-4443->4442-4443/tcp, 0.0.0.0:4445->4444/tcp   seleniumHub

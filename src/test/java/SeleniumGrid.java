@@ -16,10 +16,10 @@ public class SeleniumGrid {
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        baseUrl = "http://newtours.demoaut.com/";
+        baseUrl = "https://google.com";
         nodeURL = "http://localhost:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
-        capability.setBrowserName("firefox");
+        capability.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(nodeURL), capability);
     }
 
@@ -31,6 +31,6 @@ public class SeleniumGrid {
     @Test
     public void simpleTest() {
         driver.get(baseUrl);
-        Assert.assertEquals("demoaut.com", driver.getTitle());
+        Assert.assertEquals("Google", driver.getTitle());
     }
 }
