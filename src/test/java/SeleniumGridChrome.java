@@ -20,7 +20,7 @@ public class SeleniumGridChrome {
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        baseUrl = "https://google.com";
+        baseUrl = "https://itc.ua";
         nodeURL = "http://localhost:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setBrowserName("chrome");
@@ -36,6 +36,7 @@ public class SeleniumGridChrome {
     public void simpleTest() {
         driver.get(baseUrl);
         Assert.assertEquals("Google", driver.getTitle());
-        Allure.addAttachment("Any text", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+        Allure.addAttachment("Screenshot from grid", new ByteArrayInputStream(((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.BYTES)));
     }
 }
