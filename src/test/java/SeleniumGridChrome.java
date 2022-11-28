@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SeleniumGrid {
+public class SeleniumGridChrome {
 
     WebDriver driver;
     String baseUrl, nodeURL;
