@@ -20,7 +20,7 @@ public class SeleniumGridChrome {
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        baseUrl = "https://itc.ua";
+        baseUrl = "https://www.amazon.com";
         nodeURL = "http://localhost:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setBrowserName("chrome");
