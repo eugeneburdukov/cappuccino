@@ -19,7 +19,7 @@ public class SeleniumGridFirefox {
         baseUrl = "https://itc.ua";
         nodeURL = "http://localhost:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
-        capability.setBrowserName("firefox");
+        capability.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(nodeURL), capability);
     }
 
