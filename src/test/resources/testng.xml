@@ -6,9 +6,9 @@
             <class name="SeleniumGridChrome"/>
         </classes>
     </test>
-    <test name="Test2" parallel="methods" thread-count="3">
-        <classes>
-            <class name="SeleniumGridFirefox"/>
-        </classes>
-    </test>
+<!--    <test name="Test2" parallel="methods" thread-count="3">-->
+<!--        <classes>-->
+<!--            <class name="SeleniumGridFirefox"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
