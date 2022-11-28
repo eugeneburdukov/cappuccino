@@ -35,8 +35,8 @@ public class SeleniumGridChrome {
     @Test
     public void simpleTest() {
         driver.get(baseUrl);
-        Assert.assertEquals("Google", driver.getTitle());
         Allure.addAttachment("Screenshot from grid", new ByteArrayInputStream(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES)));
+        Assert.assertEquals("ITC.ua", driver.getTitle());
     }
 }
