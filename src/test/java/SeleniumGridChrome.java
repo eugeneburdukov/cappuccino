@@ -16,15 +16,16 @@ import java.net.URL;
 public class SeleniumGridChrome {
 
     WebDriver driver;
-    String baseUrl, nodeURL;
+    String baseUrl, nodeURLlocal, nodeURLRemote;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
         baseUrl = "https://www.amazon.com";
-        nodeURL = "http://localhost:4445";
+        nodeURLlocal = "http://localhost:4445";
+        nodeURLRemote = "http://3.134.82.38:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setBrowserName("chrome");
-        driver = new RemoteWebDriver(new URL(nodeURL), capability);
+        driver = new RemoteWebDriver(new URL(nodeURLRemote), capability);
     }
 
     @AfterTest
