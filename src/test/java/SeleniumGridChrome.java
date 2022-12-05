@@ -36,7 +36,7 @@ public class SeleniumGridChrome {
     @Test
     public void simpleTest() {
         driver.get(baseUrl);
-        Allure.addAttachment("Screenshot from grid", new ByteArrayInputStream(((TakesScreenshot) driver)
+        Allure.addAttachment("Screenshot from grid - chrome", new ByteArrayInputStream(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES)));
         Assert.assertEquals(driver.getTitle(), "Eolymp");
     }
