@@ -19,7 +19,7 @@ public class SeleniumGridFirefox {
         baseUrl = "https://www.amazon.com";
         nodeURL = "http://localhost:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
-        capability.setBrowserName("chrome");
+        capability.setBrowserName("firefox");
         driver = new RemoteWebDriver(new URL(nodeURL), capability);
     }
 
@@ -31,7 +31,7 @@ public class SeleniumGridFirefox {
     @Test
     public void simpleTest() {
         driver.get(baseUrl);
-        Assert.assertEquals("ITC.ua", driver.getTitle());
+        Assert.assertEquals(driver.getTitle(), "Amazon.com. Spend less. Smile more.");
     }
 }
 
