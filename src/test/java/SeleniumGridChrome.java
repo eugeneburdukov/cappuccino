@@ -20,12 +20,12 @@ public class SeleniumGridChrome {
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        baseUrl = "https://www.amazon.com";
+        baseUrl = "https://www.eolymp.com";
         nodeURLlocal = "http://localhost:4445";
-        nodeURLRemote = "http://3.134.82.38:4445";
+        nodeURLRemote = "http://3.21.52.134:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setBrowserName("chrome");
-        driver = new RemoteWebDriver(new URL(nodeURLRemote), capability);
+        driver = new RemoteWebDriver(new URL(nodeURLlocal), capability);
     }
 
     @AfterTest
@@ -38,6 +38,6 @@ public class SeleniumGridChrome {
         driver.get(baseUrl);
         Allure.addAttachment("Screenshot from grid", new ByteArrayInputStream(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES)));
-        Assert.assertEquals("Amazon.com. Spend less. Smile more.", driver.getTitle());
+        Assert.assertEquals(driver.getTitle(), "Amazon.com");
     }
 }

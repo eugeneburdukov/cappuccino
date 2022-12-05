@@ -1,4 +1,6 @@
 docker:
+
+docker compose -f awsgrid4.yml up
 docker compose -f seleniumgrid4.yml up
 docker compose -f seleniumgrid4.yml down
 
@@ -11,6 +13,7 @@ docker ps -a
 
 How to access VNC:
 http://127.0.0.1:PORT
+http://3.21.52.134:49153
 
 docker ps -a
 CONTAINER ID   IMAGE                                       COMMAND                  CREATED         STATUS         PORTS                                                      NAMES
