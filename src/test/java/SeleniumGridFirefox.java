@@ -21,7 +21,7 @@ public class SeleniumGridFirefox {
     @BeforeTest
     public void setUp() throws MalformedURLException {
         baseUrl = "https://www.amazon.com";
-        nodeURL = "http://localhost:4445";
+        nodeURL = "http://192.168.1.231:4445/ui/index.html#/";
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setBrowserName("firefox");
         driver = new RemoteWebDriver(new URL(nodeURL), capability);
