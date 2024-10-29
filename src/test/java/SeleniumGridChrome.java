@@ -35,14 +35,14 @@ public class SeleniumGridChrome {
 
     @Test
     public void simpleTest() {
-        driver.get(nodeURLlocal);
+        driver.get(baseUrl);
         Allure.addAttachment("Screenshot from grid - chrome", new ByteArrayInputStream(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES)));
         Assert.assertEquals(driver.getTitle(), driver.getTitle());
     }
     @Test
     public void simpleTest2() {
-        driver.get(nodeURLlocal);
+        driver.get(baseUrl);
         Allure.addAttachment("Screenshot from grid - chrome", new ByteArrayInputStream(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES)));
         Assert.assertEquals(driver.getTitle(), driver.getTitle());

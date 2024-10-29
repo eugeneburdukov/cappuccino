@@ -34,7 +34,7 @@ public class SeleniumGridFirefox {
 
     @Test
     public void simpleTest() {
-        driver.get(nodeURL);
+        driver.get(baseUrl);
         Allure.addAttachment("Screenshot from grid - firefox", new ByteArrayInputStream(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.BYTES)));
         Assert.assertEquals(driver.getTitle(), driver.getTitle());
