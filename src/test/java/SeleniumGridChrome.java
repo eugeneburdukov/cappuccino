@@ -21,8 +21,8 @@ public class SeleniumGridChrome {
     @BeforeTest
     public void setUp() throws MalformedURLException {
         baseUrl = "https://www.eolymp.com";
-        nodeURLlocal = "http://192.168.1.231:4445";
-        nodeURLRemote = "http://3.21.52.134:4445";
+        nodeURLlocal = "http://192.168.1.231:4445";//
+        // nodeURLRemote = "http://3.21.52.134:4445";
         DesiredCapabilities capability = new DesiredCapabilities();
         capability.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(nodeURLlocal), capability);
